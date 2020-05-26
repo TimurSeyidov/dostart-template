@@ -1,0 +1,114 @@
+.el-button {
+	border: 1px solid transparent;
+	background-color: transparent;
+	color: $clr-black;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 8px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	&__red {
+		background-color: $clr-red;
+		border-color: $clr-red;
+		color: #fff;
+		transition: 0.15s ease-in;
+		&:hover {
+			background-color: #fff;
+			border-color: #fff;
+			color: $clr-red;
+		}
+	}
+	&__stroke {
+		background-color: transparent;
+		border-color: $brd-light-gray;
+		color: #fff;
+		transition: 0.15s ease-in;
+		&:hover {
+			background: #fff;
+			color: $clr-black;
+		}
+	}
+	&__round {
+		border-radius: 30px;
+	}
+	&__circle {
+		align-items: center;
+		background-color: #fff;
+		border-radius: 50%;
+		color: $clr-red;
+		font-size: 20px;
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		height: 60px;
+		width: 60px;
+	}
+	&__big {
+		font-size: 14px;
+		font-weight: 800;
+		letter-spacing: 1px;
+		line-height: 25px;
+		padding: 10px 40px 10px;
+	}
+	&__pulse {
+		position: relative;
+		> * {
+			position: relative;
+			z-index: 2;
+		}
+		&:before,
+		&:after {
+			background: #ffffff repeat scroll 0 0;
+			border-radius: 50%;
+			content: "";
+			display: block;
+			height: 80px;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			width: 80px;
+		}
+		&:before {
+			animation: pulse-border 1500ms ease-out infinite;
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 0;
+		}
+		&:after {
+			transform: translateX(-50%) translateY(-50%);
+			z-index: 1;
+			transition: all 200ms;
+		}
+	}
+}
+
+@-webkit-keyframes pulse-border {
+	0% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0)
+			scale(1.5);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		opacity: 0;
+	}
+}
+
+@keyframes pulse-border {
+	0% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0)
+			scale(1.5);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		opacity: 0;
+	}
+}

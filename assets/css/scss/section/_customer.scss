@@ -1,0 +1,17 @@
+#section-customer {
+	padding: 120px 0;
+	.wrapper {
+		align-items: center;
+		display: flex;
+	}
+	.left-column {
+		color: #666;
+		font-size: 13px;
+		flex-grow: 1;
+	}
+	.right-column {
+		flex-grow: 0;
+		flex-shrink: 0;
+		width: 42%;
+	}
+}

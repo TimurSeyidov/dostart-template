@@ -1,0 +1,149 @@
+#section-footer {
+	.wrapper {
+		display: flex;
+	}
+	.top {
+		padding-bottom: 60px;
+		padding-top: 120px;
+		.wrapper {
+			align-items: flex-start;
+			justify-content: space-between;
+			> * {
+				box-sizing: border-box;
+			}
+		}
+		.mini-about,
+		.contact {
+			flex-grow: 0;
+			flex-shrink: 0;
+			width: 33%;
+			p {
+				color: #999;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 26px;
+			}
+		}
+		.column {
+			flex-grow: 1;
+			padding-left: 30px;
+			padding-right: 30px;
+			.title {
+				font-size: 18px;
+				font-weight: 600;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			nav {
+				ul {
+					@extend %list-style;
+					li {
+						margin-top: 20px;
+						&:first-child {
+							margin-top: 0;
+						}
+						a {
+							color: #999;
+							font-size: 14px;
+							text-decoration: none;
+							transition: 0.15s ease-in;
+							&:hover {
+								color: $clr-red;
+							}
+						}
+					}
+				}
+			}
+		}
+		.mini-about {
+			margin-right: 30px;
+			.logotype {
+				text-decoration: none;
+				img {
+					@extend %responsive;
+				}
+			}
+			hr {
+				background-color: $brd-light-gray;
+				border: none;
+				height: 1px;
+				margin: 15px 0;
+				width: 100%;
+			}
+		}
+		.contact {
+			margin-left: 30px;
+			.address {
+				ul {
+					@extend %list-style;
+					li {
+						align-items: flex-start;
+						display: flex;
+						margin-top: 15px;
+						&:first-child {
+							margin-top: 0;
+						}
+						.icon {
+							color: $clr-red;
+							flex-grow: 0;
+							flex-shrink: 0;
+							font-size: 25px;
+							width: 30px;
+						}
+						.info {
+							color: #999;
+							font-size: 14px;
+							margin-left: 10px;
+							h5 {
+								color: $clr-black;
+								font-weight: 600;
+								margin-bottom: 0;
+								margin-top: 0;
+								text-transform: uppercase;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.bottom {
+		background: $clr-light-gray;
+		border-top: 1px solid $brd-light-gray;
+		justify-content: space-between;
+		padding: 20px 0;
+		.wrapper {
+			align-items: center;
+		}
+		.copyright {
+			font-size: 14px;
+			text-transform: capitalize;
+			a {
+				color: $clr-red;
+				text-decoration: none;
+			}
+		}
+		nav {
+			margin-left: auto;
+			ul {
+				@extend %list-style;
+				align-items: center;
+				display: flex;
+				li {
+					margin: 0 25px;
+					a {
+						color: $clr-black;
+						font-size: 13px;
+						font-weight: 600;
+						text-decoration: none;
+						text-transform: uppercase;
+						transition: 0.15s ease-in;
+						&:hover {
+							color: $clr-red;
+						}
+					}
+				}
+			}
+		}
+	}
+}

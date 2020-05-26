@@ -1,0 +1,9 @@
+.block-modal {
+	background-color: #fff;
+	padding: 7px;
+	.modal-content {
+		iframe {
+			vertical-align: bottom;
+		}
+	}
+}

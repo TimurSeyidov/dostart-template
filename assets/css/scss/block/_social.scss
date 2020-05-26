@@ -1,0 +1,28 @@
+.block-social {
+	.title {
+		color: $clr-black;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+	ul {
+		@extend %list-style;
+		display: flex;
+		align-items: start;
+		li {
+			margin-left: 10px;
+			&:first-child {
+				margin-left: 0;
+			}
+			a {
+				align-items: center;
+				border: 1px solid $brd-light-gray;
+				color: $clr-black;
+				display: flex;
+				height: 40px;
+				justify-content: center;
+				text-decoration: none;
+				width: 40px;
+			}
+		}
+	}
+}
